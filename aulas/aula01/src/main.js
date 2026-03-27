@@ -1,7 +1,5 @@
 import "./style.css";
 
-import "./style.css";
-
 const botao = document.querySelector("button");
 
 botao.addEventListener("click", function (e) {
