@@ -1,11 +1,10 @@
 import logo from "../assets/learn.svg";
 import Menu from "./Menu";
-
 function Sidebar() {
   return (
     <aside>
       <header>
-        <img src={logo} alt="logotipo" />
+        <img src={logo} alt="Logotipo" />
         <h1>Aluno Online</h1>
       </header>
       <Menu />
