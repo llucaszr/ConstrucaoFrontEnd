@@ -1,18 +1,14 @@
-function InputMatricula(){
+function InputMatricula({ erro, mudaValor}){
     return (
         <>
-        <form
         <label htmlFor="matricula">Matrícula</label>
         <input
           type="number"
           id="matricula"
           name="matricula"
-          onChange={(e) => {
-            setMatricula(e.target.value);
-            setMatriculaErro("");
-          }}
+          onChange={mudaValor}
         />
-        <p>{matriculaErro}</p>
+        <p>{erro}</p>
         </>
     )
 }
