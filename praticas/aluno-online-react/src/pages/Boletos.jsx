@@ -1,4 +1,29 @@
 import Aside from "../components/Aside";
+import PageHeader from "../components/PageHeader";
+import DataTable from "../components/DataTable";
+
+const BOLETOS_COLUMNS = [
+  { label: "Vencimento", key: "vencimento" },
+  { label: "Valor R$", key: "valor", align: "center" },
+  { label: "Situação", key: "situacao", align: "center" },
+];
+
+const BOLETOS_DATA = [
+  { vencimento: "19/01/2026", valor: "500,00", situacao: "Pago" },
+  { vencimento: "19/02/2026", valor: "500,00", situacao: "Em atraso" },
+  { vencimento: "19/03/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/04/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/05/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/06/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/07/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/08/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/09/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/10/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/11/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/12/2026", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/01/2027", valor: "500,00", situacao: "A Pagar" },
+  { vencimento: "19/02/2027", valor: "500,00", situacao: "A Pagar" },
+];
 
 export default function Boletos() {
   return (
@@ -6,35 +31,11 @@ export default function Boletos() {
       <Aside />
       <main className="flex-1 flex flex-col w-full">
         <div className="px-4 md:px-8 pb-8 space-y-4">
-          <header className="flex flex-col gap-2">
-            <article className="flex flex-row place-content-between items-center">
-              <h1 className="font-bold text-4xl text-gray-900">Meus Boletos</h1>
-              <img src="/avatar.svg" className="w-12 h-12" alt="avatar" />
-            </article>
-            <h3 className="font-bold text-lg text-black">
-              Visualize e baixe seus boletos
-            </h3>
-          </header>
-
-          <section className="flex flex-col my-6 bg-white rounded-lg overflow-hidden shadow-sm p-6">
-            <h2 className="font-bold text-2xl text-gray-900 mb-4">
-              Boletos Disponíveis
-            </h2>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 border-b border-gray-300">
-                <span className="font-semibold text-gray-800">Abril 2026</span>
-                <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                  Baixar
-                </button>
-              </div>
-              <div className="flex justify-between items-center p-3 border-b border-gray-300">
-                <span className="font-semibold text-gray-800">Maio 2026</span>
-                <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                  Baixar
-                </button>
-              </div>
-            </div>
-          </section>
+          <PageHeader
+            title="Meus Boletos"
+            subtitle="Histórico de Pagamentos"
+          />
+          <DataTable columns={BOLETOS_COLUMNS} data={BOLETOS_DATA} />
         </div>
       </main>
     </div>
