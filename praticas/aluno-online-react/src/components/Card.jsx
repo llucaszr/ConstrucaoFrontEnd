@@ -10,3 +10,4 @@ export default function Card({ title, children }) {
     </section>
   );
 }
+export default Card;
