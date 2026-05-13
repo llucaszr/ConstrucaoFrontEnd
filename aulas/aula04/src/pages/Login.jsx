@@ -1,12 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 function Login() {
-
-  const { login } = useContext(AuthContext);
+  const { login } = useAuthContext();
 
   const handleEntrar = () => {
-    login({usuario: "lucas@iesb.edu.br", senha: "123456"});
+    login({ usuario: "lucas@iesb.edu.br", senha: "123456" });
   };
 
   return (
