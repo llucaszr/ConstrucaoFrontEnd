@@ -5,8 +5,6 @@ import { useAuthContext } from "../contexts/AuthContext";
 function Layout() {
   const { logado } = useAuthContext();
 
-  
-
   return (
     <>
       {logado ? (
