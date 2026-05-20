@@ -5,21 +5,24 @@ const AuthContext = createContext();
 
 // cria o provedor
 function AuthProvider({ children }) {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
   const [usuario, setUsuario] = useState({});
 
   const login = (dados) => {
     // Chamar a API passando dados com usuário e senha
     setUsuario({
-      id: 0,
-      nome: "Lucas",
+      nome: "lucas",
       email: "lucas@iesb.edu.br",
     });
     setLogado(true);
   };
 
   const logout = () => {
-    setUsuario({});
+    setUsuario({
+      id: 0,
+      nome: "lucas",
+      email: "lucas@iesb.edu.br",
+    });
     setLogado(false);
   };
 
@@ -35,4 +38,4 @@ function useAuthContext() {
   return useContext(AuthContext);
 }
 
-export { useAuthContext, AuthProvider,};
+export { useAuthContext, AuthProvider };
