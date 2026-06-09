@@ -2,21 +2,9 @@
   "produtos": [
     {
       "nome": "banana",
-      "preco": "9.99",
+      "preco": "1,99",
       "unidade": "kg",
-      "id": "7tbuLuWEN8E"
-    },
-    {
-      "nome": "pade",
-      "preco": "0",
-      "unidade": "1",
-      "id": "WNiDci_X10Y"
-    },
-    {
-      "nome": "laranja",
-      "preco": "1.99",
-      "unidade": "2",
-      "id": "SDPo38K3KzE"
+      "id": "XqVBzV27ThA"
     }
   ],
   "clientes": [],
